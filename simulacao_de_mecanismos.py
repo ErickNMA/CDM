@@ -52,7 +52,7 @@ def isIn(n, list):
             return True
     return False
 
-def kinematicsSolve(ang, plot=False, cross=False, dinamic=False):
+def kinematicsSolve(ang, cross=False, plot=False, dinamic=False):
     #Entrada:
     L1 = 180
     L2 = 50
@@ -239,10 +239,10 @@ def kinematicsSolve(ang, plot=False, cross=False, dinamic=False):
         
         cv.waitKey(dinamic*30)
 
-#var = 0
-#while True:
-#    kinematicsSolve(var%360, True, False)
-#    var += 1
+var = 0
+while True:
+    kinematicsSolve(var%360, False, True, True)
+    var += 1
 
 
-kinematicsSolve(30)
+#kinematicsSolve(30)
