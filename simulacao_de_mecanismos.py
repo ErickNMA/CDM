@@ -238,8 +238,8 @@ def kinematicsSolve(ang, plot=False, cross=False):
         cv.waitKey(30)
 
 var = 0
-while True:
-    kinematicsSolve(var%360, True, False)
-    var += 1
+#while True:
+#    kinematicsSolve(var%360, True, False)
+#    var += 1
 
-#kinematicsSolve(30)
+kinematicsSolve(30)
