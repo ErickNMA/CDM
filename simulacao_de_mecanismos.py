@@ -52,7 +52,7 @@ def isIn(n, list):
             return True
     return False
 
-def kinematicsSolve(ang, plot=False, cross=False):
+def kinematicsSolve(ang, cross=False, plot=False, dinamic=False):
     #Entrada:
     L1 = 180
     L2 = 50
@@ -170,10 +170,12 @@ def kinematicsSolve(ang, plot=False, cross=False):
     t4 = (360-((m.atan((solutions[1][2][1]-solutions[1][3][1])/(solutions[1][2][0]-solutions[1][3][0]))*180/m.pi)+180))
     final_angles.append([t2, t3, y, t4])
 
+    print("\n\n\n*******************************************************************************************************")
     print("Configuração Aberta:")
     print("Ângulos: ", "\t theta2 =", round(final_angles[0][0], 4), "\t theta3 =", round(final_angles[0][1], 4), "\t gamma =", round(final_angles[0][2], 4), "\t theta4 =", round(final_angles[0][3], 4))
-    print("Configuração Cruzada:")
+    print("\nConfiguração Cruzada:")
     print("Ângulos: ", "\t theta2 =", round(final_angles[1][0], 4), "\t theta3 =", round(final_angles[1][1], 4), "\t gamma =", round(final_angles[1][2], 4), "\t theta4 =", round(final_angles[1][3], 4))
+    print("\n*******************************************************************************************************\n\n\n")
 
     if(plot):
         #Plotagem
@@ -235,11 +237,11 @@ def kinematicsSolve(ang, plot=False, cross=False):
             cv.line(frame, (int(p1a), int(p1b)), (int(p2a), int(p2b)), (0, 0, 255), 15)
             cv.imshow("Configuracao Aberta", frame)
         
-        cv.waitKey(30)
+        cv.waitKey(dinamic*30)
 
 var = 0
-#while True:
-#    kinematicsSolve(var%360, True, False)
-#    var += 1
+while True:
+    kinematicsSolve(var%360, False, True, True)
+    var += 1
 
-kinematicsSolve(30)
+#kinematicsSolve(30)
