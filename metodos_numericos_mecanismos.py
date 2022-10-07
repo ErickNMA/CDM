@@ -114,6 +114,7 @@ class Mechanism:
         plt.tick_params(labelsize=20)
         plt.ylabel('Ângulo (º)', fontsize=30)
         plt.xlabel('Iterações', fontsize=30)
+        plt.xticks(it)
         #plt.xlim(2400, 2520)
         plt.legend(fontsize=20)
         #plt.ylim(74, 81)
