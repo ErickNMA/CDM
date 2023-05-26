@@ -241,7 +241,7 @@ def kinematicsSolve(ang, cross=False, plot=False, dinamic=False):
 
 var = 0
 while True:
-    kinematicsSolve(var%360, False, True, True)
+    kinematicsSolve(var%360, True, True, True)
     var += 1
 
 #kinematicsSolve(30)
